@@ -6,11 +6,17 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "csv"
+require "faker"
 
 Player.delete_all
 Pokemon.delete_all
 Type.delete_all
 PlayerPokemon.delete_all
+
+200.times do
+  Player.create(name: Faker::Name.unique.name)
+end
+puts "Created 200 players."
 
 filename = Rails.root.join("db/Pokemon_Data.csv")
 puts "Loading data from the csv file: #{filename}"
@@ -39,3 +45,11 @@ pokemons.each do |p|
 end
 puts "Created #{Type.count} types."
 puts "Created #{Pokemon.count} pokemons."
+
+2000.times do
+  PlayerPokemon.create(
+    player_id:  Faker::Number.between(from: 1, to: 200),
+    pokemon_id: Faker::Number.between(from: 1, to: 1190)
+  )
+end
+puts "Create 2000 rows in player_pokemons table."

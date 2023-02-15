@@ -1,0 +1,16 @@
+This is a dataset about Pokemon and players. I obtains it from Kaggle and faker.
+All the data about pokemon is pulled from a CSV file called Pokemon_Data.csv, and it will be divided into four tables.
+the data about players is created by faker.
+
+
+pokemons
+-pokemon_id, pokemon_name, type, stat_total, HP, attack, defense, speed, first_ability, second_ability, hidden_ability
+
+types
+-type_id, name
+
+players
+-player_id, name
+
+player_pokemons
+-player_id, pokemon_id

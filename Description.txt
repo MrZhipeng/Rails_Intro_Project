@@ -4,13 +4,13 @@ the data about players is created by faker.
 
 
 pokemons
--pokemon_id, pokemon_name, type, stat_total, HP, attack, defense, speed, first_ability, second_ability, hidden_ability
+-id, name, type_id, total, HP, attack, defense, speed, first_ability, second_ability, hidden_ability
 
 types
--type_id, name
+-id, name
 
 players
--player_id, name
+-id, name
 
 player_pokemons
 -player_id, pokemon_id

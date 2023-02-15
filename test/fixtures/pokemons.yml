@@ -3,7 +3,7 @@
 one:
   name: MyString
   type: one
-  total: 1
+  stat_total: 1
   HP: 1
   attack: 1
   defense: 1
@@ -15,7 +15,7 @@ one:
 two:
   name: MyString
   type: two
-  total: 1
+  stat_total: 1
   HP: 1
   attack: 1
   defense: 1

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_15_010841) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_15_012809) do
   create_table "player_pokemons", force: :cascade do |t|
     t.integer "player_id", null: false
     t.integer "pokemon_id", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_010841) do
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.integer "type_id", null: false
-    t.integer "total"
+    t.integer "stat_total"
     t.integer "HP"
     t.integer "attack"
     t.integer "defense"

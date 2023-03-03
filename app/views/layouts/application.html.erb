@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsIntroProject</title>
+    <title>Home of Pokemons</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
   </head>
 
   <body>
+    <section>
+      <div>
+        <h1>Home of Pokemons</h1>
+      </div>
+        <nav>
+          <div>
+            <%= link_to "Home", root_path %>
+            <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+              <ul>
+                <li>
+                  <%= link_to "Players", players_path %>
+                </li>
+                <li>
+                  <%= link_to "Pokemons", pokemons_path %>
+                </li>
+                <li>
+                  <%= link_to "Types", types_path %>
+                </li>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
     <%= yield %>
   </body>
 </html>

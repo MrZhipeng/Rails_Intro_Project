@@ -3,9 +3,19 @@
   <%= @player.name %>
 </h1>
 
-<h3>
-  The player has <%= @player.pokemons.count %> pokemons.
-</h3>
+
+
+<% if @player.pokemons.count > 0 %>
+  <h3>
+    The player has <%= @player.pokemons.count %> pokemons.
+  </h3>
+<% else %>
+  <h3>
+    The player has no pokemon.
+  </h3>
+<% end %>
+
+
 
 <ul>
   <% @player.pokemons.each do |pokemon| %>

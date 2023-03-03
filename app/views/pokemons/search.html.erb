@@ -1,0 +1,9 @@
+<p class="mb-5">
+  Pokemons found when searching for: <%= params[:kywords] %>
+</p>
+
+<ul>
+  <% @pokemons.each do |pokemon| %>
+    <li><%= link_to pokemon.name, pokemon %></li>
+  <% end %>
+</ul>

@@ -19,7 +19,7 @@
         <tbody>
           <% @pokemons.each do |pokemon| %>
             <tr>
-              <td><%= pokemon.name %></td>
+              <td><%= link_to pokemon.name, pokemon %></td>
               <td><%= pokemon.stat_total %></td>
               <td><%= pokemon.HP %></td>
               <td><%= pokemon.attack %></td>

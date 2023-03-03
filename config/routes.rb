@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   # get "about" => "about#index"
   get "about" => "pages#about", as: "about"
   root to: "home#index"
-  resources :pokemons, only: %i[index show]
+  resources :pokemons, only: %i[index show] do
+    collection do
+      get "search"
+    end
+  end
   resources :players, only: %i[index show]
   resources :types, only: %i[index show]
 end

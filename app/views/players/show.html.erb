@@ -1,23 +1,9 @@
-<style>
-  .title {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 0;
-  }
-  .list {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-  }
-</style>
-
 <% content_for(:html_title) {@player.name}%>
-<h1 class="title is-1">
+<h1 class="title is-1" style="display: flex; flex: 1; justify-content: center; margin: 0;">
   <%= @player.name %>
 </h1>
 
-<div class="title is-3">
+<div class="title is-3" style="display: flex; flex: 1; justify-content: center; margin: 0;">
   <% if @player.pokemons.count > 0 %>
     <h2>
       The player has <%= @player.pokemons.count %> pokemons.
@@ -29,7 +15,7 @@
   <% end %>
 </div>
 
-<div class="list">
+<div style="display: flex; flex: 1; justify-content: center;">
   <ul>
     <% @player.pokemons.each do |pokemon| %>
       <li><%= link_to pokemon.name, pokemon %></li>

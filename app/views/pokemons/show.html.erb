@@ -1,14 +1,5 @@
-<style>
-  .title {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 0;
-  }
-</style>
-
 <% content_for(:html_title) {@pokemon.name}%>
-<h1 class="title"><%= @pokemon.name %></h1>
+<h1 style="display: flex; flex: 1; justify-content: center; margin: 0;"><%= @pokemon.name %></h1>
 
 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
   <tr>

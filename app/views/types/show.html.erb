@@ -1,22 +1,7 @@
-<style>
-  .title {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .list {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-  }
-</style>
-
 <% content_for(:html_title) {@type.name}%>
-<h1 class="title"><%= @type.name %></h1>
+<h1 style="display: flex; flex: 1; justify-content: center; margin: 0;"><%= @type.name %></h1>
 
-<div class= "list">
+<div style="display: flex; flex: 1; justify-content: center;">
   <ul>
     <% @pokemons.each do |pokemon| %>
       <li>

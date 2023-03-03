@@ -1,19 +1,5 @@
-<style>
-  .title {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 0;
-  }
-  .list {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-  }
-</style>
-
-<h1 class="title">Players</h1>
-<div class="list">
+<h1 style="display: flex; flex: 1; justify-content: center; margin: 0;">Players</h1>
+<div style="display: flex; flex: 1; justify-content: center;">
   <ul>
     <% @players.each do |player| %>
       <li>

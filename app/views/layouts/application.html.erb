@@ -1,13 +1,5 @@
-<style>
-  .title {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 0;
-  }
-</style>
-
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Home of Pokemons</title>
@@ -22,11 +14,10 @@
 
   <body>
     <section class="container">
-      <div class="title">
+      <div style= "display: flex; flex: 1; justify-content: center; margin: 0;">
         <h1 class="panel-heading title is-1 has-text-link">Home of Pokemons</h1>
       </div>
-        <%= render partial:'shared/navbar'%>
-      </div>
+      <%= render partial:'shared/navbar'%>
       <%= form_with(url: search_pokemons_path, method: :get, local: true) do %>
         <div class="field is-grouped mb-5">
           <%= text_field_tag(:keywords, nil, class: "input", placeholder: "Search for pokemons...") %>

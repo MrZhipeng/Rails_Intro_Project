@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   get "types/index"
   get "types/show"
   get "players/index"
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root to: "home#index"
   resources :pokemons, only: %i[index show]
   resources :players, only: %i[index show]
   resources :types, only: %i[index show]

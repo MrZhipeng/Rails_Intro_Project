@@ -1,8 +1,25 @@
-<h1>Types</h1>
-<ul>
-  <% @types.each do |t| %>
-    <li>
-    <%= t.name %>
-    </li>
-  <% end %>
-</ul>
+<style>
+  .title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+</style>
+
+<h1 class="title">Types</h1>
+<div class="list">
+  <ul>
+    <% @types.each do |type| %>
+      <li>
+      <%= link_to type.name, type %>
+      </li>
+    <% end %>
+  </ul>
+</div>

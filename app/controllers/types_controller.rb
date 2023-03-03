@@ -5,5 +5,6 @@ class TypesController < ApplicationController
 
   def show
     @type = Type.find(params[:id])
+    @pokemons = @type.pokemons.order(:name).page(params[:page])
   end
 end

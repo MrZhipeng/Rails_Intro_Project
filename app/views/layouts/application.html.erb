@@ -1,3 +1,12 @@
+<style>
+  .title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+</style>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,8 +22,8 @@
 
   <body>
     <section class="container">
-      <div>
-        <h1>Home of Pokemons</h1>
+      <div class="title">
+        <h1 class="panel-heading title is-1 has-text-link">Home of Pokemons</h1>
       </div>
         <%= render partial:'shared/navbar'%>
       </div>

@@ -1,19 +1,30 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-start">
-      <div class="navbar-item">
-        <%= link_to "Home", root_path %>
+<style>
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="navbar-container has-background-warning-light" >
+  <nav class="navbar has-background-warning-light" role="navigation" aria-label="main navigation">
+      <div class="navbar-start">
+        <div class="navbar-item">
+          <%= link_to "Home", root_path %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "Players", players_path %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "Pokemons", pokemons_path %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "Types", types_path %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to "About", about_path %>
+        </div>
       </div>
-      <div class="navbar-item">
-        <%= link_to "Players", players_path %>
-      </div>
-      <div class="navbar-item">
-        <%= link_to "Pokemons", pokemons_path %>
-      </div>
-      <div class="navbar-item">
-        <%= link_to "Types", types_path %>
-      </div>
-      <div class="navbar-item">
-        <%= link_to "About", about_path %>
-      </div>
-    </div>
-</nav>
+  </nav>
+</div>
+
+

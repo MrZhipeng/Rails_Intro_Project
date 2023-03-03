@@ -1,2 +1,31 @@
-<% content_for(:html_title) {@Type.name}%>
-<%= @type.name %>
+<style>
+  .title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+</style>
+
+<% content_for(:html_title) {@type.name}%>
+<h1 class="title"><%= @type.name %></h1>
+
+<div class= "list">
+  <ul>
+    <% @pokemons.each do |pokemon| %>
+      <li>
+      <%= link_to pokemon.name, pokemon %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class= "p-4 has-background-link-light m-4" style="width:60%;">
+  <%= paginate @pokemons %>
+</div>

@@ -1,10 +1,28 @@
-<h1>Pokemons</h1>
-<ul>
-  <% @pokemons.each do |pokemon| %>
-    <li>
-    <%= link_to pokemon.name, pokemon %>
-    </li>
-  <% end %>
-</ul>
+<style>
+  .title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+  .list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+</style>
 
-<%= paginate @pokemons %>
+<h1 class="title">Pokemons</h1>
+<div class= "list">
+  <ul>
+    <% @pokemons.each do |pokemon| %>
+      <li>
+      <%= link_to pokemon.name, pokemon %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class= "p-4 has-background-link-light m-4" style="width:60%;">
+  <%= paginate @pokemons %>
+</div>

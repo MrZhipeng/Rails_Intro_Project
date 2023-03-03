@@ -1,27 +1,41 @@
+<style>
+  .title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0;
+  }
+  .list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+</style>
+
 <% content_for(:html_title) {@player.name}%>
-<h1>
+<h1 class="title is-1">
   <%= @player.name %>
 </h1>
 
-
-
-<% if @player.pokemons.count > 0 %>
-  <h3>
-    The player has <%= @player.pokemons.count %> pokemons.
-  </h3>
-<% else %>
-  <h3>
-    The player has no pokemon.
-  </h3>
-<% end %>
-
-
-
-<ul>
-  <% @player.pokemons.each do |pokemon| %>
-    <li><%= link_to pokemon.name, pokemon %></li>
+<div class="title is-3">
+  <% if @player.pokemons.count > 0 %>
+    <h2>
+      The player has <%= @player.pokemons.count %> pokemons.
+    </h2>
+  <% else %>
+    <h2>
+      The player has no pokemon.
+    </h2>
   <% end %>
-</ul>
+</div>
+
+<div class="list">
+  <ul>
+    <% @player.pokemons.each do |pokemon| %>
+      <li><%= link_to pokemon.name, pokemon %></li>
+    <% end %>
+  </ul>
+</div>
 
 <%=link_to "Back to all players", players_path%>
 

@@ -1,9 +1,9 @@
 class TypesController < ApplicationController
   def index
-    @Types = Type.all
+    @types = Type.all
   end
 
   def show
-    @Type = Type.find(params[:id])
+    @type = Type.find(params[:id])
   end
 end

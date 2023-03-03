@@ -53,3 +53,15 @@ puts "Created #{Pokemon.count} pokemons."
   )
 end
 puts "Create 2000 rows in player_pokemons table."
+
+Page.create(
+  title:     "About",
+  content:   "This data powering the website was provided by Kaggle.",
+  permalink: "about"
+)
+
+Page.create(
+  title:     "Contact Us",
+  content:   "If you like this website and would like to learn more, please reach us at obviously@fake.com",
+  permalink: "Contact"
+)

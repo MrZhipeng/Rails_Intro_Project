@@ -1,2 +1,17 @@
 <% content_for(:html_title) {@player.name}%>
-<%= @player.name %>
+<h1>
+  <%= @player.name %>
+</h1>
+
+<h3>
+  The player has <%= @player.pokemons.count %> pokemons.
+</h3>
+
+<ul>
+  <% @player.pokemons.each do |pokemon| %>
+    <li><%= link_to pokemon.name, pokemon %></li>
+  <% end %>
+</ul>
+
+<%=link_to "Back to all players", players_path%>
+

@@ -1,9 +1,9 @@
 class PokemonsController < ApplicationController
   def index
-    @Pokemons = Pokemon.all
+    @pokemons = Pokemon.all
   end
 
   def show
-    @Pokemon = Pokemon.find(params[:id])
+    @pokemon = Pokemon.find(params[:id])
   end
 end

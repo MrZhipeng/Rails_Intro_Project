@@ -1,2 +1,43 @@
-<% content_for(:html_title) {@Pokemon.name}%>
-<%= @Pokemon.name %>
+<% content_for(:html_title) {@pokemon.name}%>
+<h1><%= @pokemon.name %></h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <td><%= @pokemon.type.name %></td>
+  </tr>
+  <tr>
+    <th>Stat Total</th>
+    <td><%= @pokemon.stat_total %></td>
+  </tr>
+  <tr>
+    <th>HP</th>
+    <td><%= @pokemon.HP %></td>
+  </tr>
+  <tr>
+    <th>Attack</th>
+    <td><%= @pokemon.attack %></td>
+  </tr>
+  <tr>
+    <th>Defense</th>
+    <td><%= @pokemon.defense %></td>
+  </tr>
+  <tr>
+    <th>Speed</th>
+    <td><%= @pokemon.speed %></td>
+  </tr>
+  <tr>
+    <th>First Ability</th>
+    <td><%= @pokemon.first_ability %></td>
+  </tr>
+  <tr>
+    <th>Second Ability</th>
+    <td><%= @pokemon.second_ability %></td>
+  </tr>
+  <tr>
+    <th>Hidden Ability</th>
+    <td><%= @pokemon.hidden_ability %></td>
+  </tr>
+</table>
+
+<%= link_to "Back to all pokemons", pokemons_path %>

@@ -10,5 +10,6 @@ class PokemonsController < ApplicationController
   def search
     wildcard_search = "%#{params[:keywords]}%"
     @pokemons = Pokemon.where("name LIKE ?", wildcard_search)
+                       .where("type_id == #{params[:id]}")
   end
 end

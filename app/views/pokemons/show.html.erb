@@ -4,7 +4,7 @@
 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
   <tr>
     <th>Type</th>
-    <td><%= @pokemon.type.name %></td>
+    <td><%= link_to @pokemon.type.name, @pokemon.type %></td>
   </tr>
   <tr>
     <th>Stat Total</th>
@@ -40,4 +40,21 @@
   </tr>
 </table>
 
-<%= link_to "Back to all pokemons", pokemons_path %>
+<div style="display: flex; flex: 1; justify-content: center;">
+  <% if @pokemon.players.count > 1 %>
+    <h2> There are <%= @pokemon.players.count %> Players who have <%= @pokemon.name %>. See the list:</h2>
+  <% elsif @pokemon.players.count == 1 %>
+      <h2> There are 1 Player who have <%= @pokemon.name %>. See the name:</h2>
+  <% else %>
+    <h2>No player has <%= @pokemon.name %>.</h2>
+  <% end %>
+</div>
+<div style="display: flex; flex: 1; justify-content: center;">
+  <ul>
+    <% @pokemon.players.each do |player| %>
+    <li><%= link_to player.name, player %></li>
+    <% end %>
+  </ul>
+</div>
+
+<%=link_to "Go Back", :back%>

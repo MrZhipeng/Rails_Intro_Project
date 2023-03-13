@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addresses
   get "about/index"
   get "home/index"
   get "types/index"
